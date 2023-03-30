@@ -2,27 +2,27 @@ import React from "react";
 import "./SingleBlog.css";
 const SingleBlog = ({ blog }) => {
   return (
-    <div>
+    <>
       <div className="single-blog">
         <img className="img" src={blog.coverImage} alt="" />
         <div className="blog-info">
           <div className="author-info">
             <div>
               <img src="" alt="" />
-              <p>Mr Raju</p>
-              <p>Mar 14 (4days ago)</p>
+              <p>{blog.authorName}</p>
+              <p>{blog.publishDate}</p>
             </div>
             <div>
-              <p>05 min read</p>
+              <p>{blog.readTime} min read</p>
               <button>B</button>
             </div>
           </div>
-          <p>How to lear html</p>
+          <p>{blog.blogTitle}</p>
           <p>#beginners #programming</p>
           <a href="#">Mark as read</a>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -10,7 +10,7 @@ const Blog = () => {
   }, []);
 
   return (
-    <div>
+    <div className="blogs">
       {blogs.map((blog) => (
         <SingleBlog blog={blog}></SingleBlog>
       ))}

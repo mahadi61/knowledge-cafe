@@ -1,0 +1,12 @@
+.single-blog{
+    margin: 0 auto;
+    max-width: 800px;
+}
+.img{
+    width: 100%;
+}
+.author-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
