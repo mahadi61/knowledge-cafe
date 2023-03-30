@@ -7,10 +7,15 @@ const SingleBlog = ({ blog }) => {
         <img className="img" src={blog.coverImage} alt="" />
         <div className="blog-info">
           <div className="author-info">
-            <div>
-              <img src="" alt="" />
-              <p>{blog.authorName}</p>
-              <p>{blog.publishDate}</p>
+            <div className="author-name-img">
+              <div className="author-img-container">
+                <img className="author-img" src={blog.authorImage} alt="" />
+              </div>
+              <div>
+                <span className="author-name">{blog.authorName}</span>
+                <br />
+                <span>{blog.publishDate}</span>
+              </div>
             </div>
             <div>
               <p>{blog.readTime} min read</p>
