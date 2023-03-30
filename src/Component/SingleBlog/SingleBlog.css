@@ -26,5 +26,21 @@
 .author-name{
     font-size: 24px;
     font-weight: 700;
-    
+
+}
+.read-time-area{
+    display: flex;
+    justify-content: center;
+}
+
+.blog-title{
+    font-size: 45px;
+    font-weight: 700;
+    color: #111111;
+}
+
+.blog-hr{
+    width: 800px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(17, 17, 17, 0.1);
 }

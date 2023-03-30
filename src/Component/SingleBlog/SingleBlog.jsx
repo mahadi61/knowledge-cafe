@@ -17,16 +17,18 @@ const SingleBlog = ({ blog }) => {
                 <span>{blog.publishDate}</span>
               </div>
             </div>
-            <div>
+            <div className="read-time-area">
               <p>{blog.readTime} min read</p>
               <button>B</button>
             </div>
           </div>
-          <p>{blog.blogTitle}</p>
+          <span className="blog-title">{blog.blogTitle}</span>
           <p>#beginners #programming</p>
           <a href="#">Mark as read</a>
         </div>
       </div>
+
+      <hr className="blog-hr" />
     </>
   );
 };
