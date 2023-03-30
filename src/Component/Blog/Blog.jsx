@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import SingleBlog from "../SingleBlog/SingleBlog";
 import "./Blog.css";
 const Blog = () => {
-  return <div>this is blog component</div>;
+  const [blogs, setBlog] = useState([]);
+  useEffect(() => {
+    fetch("data.json")
+      .then((res) => res.json())
+      .then((data) => setBlog(data));
+  }, []);
+
+  return (
+    <div>
+      {blogs.map((blog) => (
+        <SingleBlog blog={blog}></SingleBlog>
+      ))}
+    </div>
+  );
 };
 
 export default Blog;
