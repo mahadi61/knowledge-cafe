@@ -30,7 +30,12 @@
 }
 .read-time-area{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+    font-weight: 500;
+    font-size: 20px;
+    color: rgba(17, 17, 17, 0.6);
 }
 
 .blog-title{
@@ -41,6 +46,6 @@
 
 .blog-hr{
     width: 800px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border: 1px solid rgba(17, 17, 17, 0.1);
 }
