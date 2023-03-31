@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 
 import "./SingleBlog.css";
-const SingleBlog = ({ blog, bookMarked }) => {
+const SingleBlog = ({ blog, bookMarked, markAsRead }) => {
   return (
     <>
       <div className="single-blog">
@@ -29,7 +29,9 @@ const SingleBlog = ({ blog, bookMarked }) => {
           </div>
           <span className="blog-title">{blog.blogTitle}</span>
           <p>#beginners #programming</p>
-          <a href="#">Mark as read</a>
+          <a onClick={() => markAsRead(blog)} href="#">
+            Mark as read
+          </a>
         </div>
       </div>
 

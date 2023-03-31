@@ -9,13 +9,19 @@ const Home = () => {
     const newBlog = [...blogs, blog];
     setBlog(newBlog);
   };
+  const [time, setTime] = useState(0);
+  const markAsRead = ({ readTime }) => {
+    const totalTime = time + readTime;
+    setTime(totalTime);
+  };
+
   return (
     <div className="main-container">
       <div className="blog-container">
-        <Blog bookMarked={bookMarked}></Blog>
+        <Blog bookMarked={bookMarked} markAsRead={markAsRead}></Blog>
       </div>
       <div className="cart-container">
-        <Cart blogs={blogs}></Cart>
+        <Cart time={time} blogs={blogs}></Cart>
       </div>
     </div>
   );
