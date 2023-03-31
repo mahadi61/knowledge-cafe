@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Blog from "../Blog/Blog";
 import Cart from "../Cart/Cart";
 import "./Home.css";
 const Home = () => {
+  const [blogs, setBlog] = useState([]);
+
   const bookMarked = (blog) => {
-    const { blogTitle, id, readTime } = blog;
-    console.log(blogTitle, id, readTime);
+    const newBlog = [...blogs, blog];
+    setBlog(newBlog);
   };
   return (
     <div className="main-container">
@@ -13,7 +15,7 @@ const Home = () => {
         <Blog bookMarked={bookMarked}></Blog>
       </div>
       <div className="cart-container">
-        <Cart></Cart>
+        <Cart blogs={blogs}></Cart>
       </div>
     </div>
   );

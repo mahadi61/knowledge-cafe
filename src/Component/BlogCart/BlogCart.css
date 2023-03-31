@@ -1,0 +1,10 @@
+.blog-cart-title{
+    height: 100px;
+    background: #FFFFFF;
+    padding:3px 5px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #111111;
+}
