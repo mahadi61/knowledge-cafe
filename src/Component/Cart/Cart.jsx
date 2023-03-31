@@ -13,7 +13,7 @@ const Cart = ({ blogs, time }) => {
         </span>
         <div>
           {blogs.map((blog) => (
-            <BlogCart blog={blog}></BlogCart>
+            <BlogCart key={blog.id} blog={blog}></BlogCart>
           ))}
         </div>
       </div>

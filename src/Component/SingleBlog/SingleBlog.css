@@ -23,7 +23,7 @@
 }
 .author-img{
     width: 100%;
-    border-radius: 50%;
+    clip-path: circle();
 }
 .author-name{
     font-size: 24px;
