@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 
 import "./SingleBlog.css";
-const SingleBlog = ({ blog }) => {
+const SingleBlog = ({ blog, bookMarked }) => {
   return (
     <>
       <div className="single-blog">
@@ -22,7 +22,7 @@ const SingleBlog = ({ blog }) => {
             </div>
             <div className="read-time-area">
               <p>{blog.readTime} min read</p>
-              <a>
+              <a onClick={() => bookMarked(blog)}>
                 <FontAwesomeIcon icon={faBookmark} />
               </a>
             </div>
