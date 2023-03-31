@@ -1,13 +1,22 @@
 import React, { useState } from "react";
 import Blog from "../Blog/Blog";
 import Cart from "../Cart/Cart";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import "./Home.css";
 const Home = () => {
   const [blogs, setBlog] = useState([]);
 
   const bookMarked = (blog) => {
     const newBlog = [...blogs, blog];
-    setBlog(newBlog);
+    const exist = blogs.find((b) => b.id === blog.id);
+    if (exist) {
+      toast("Already Exist!");
+      setBlog(newBlog);
+    } else {
+      setBlog(newBlog);
+    }
   };
   const [time, setTime] = useState(0);
   const markAsRead = ({ readTime }) => {
